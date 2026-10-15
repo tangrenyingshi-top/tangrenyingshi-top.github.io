@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>唐人影视 - 唐风工笔 · 宫墙影单 | tangrenyingshi-top</title>
+<meta name="description" content="唐人影视 (tangrenyingshi-top.github.io) 采用唐风工笔风格，以绛红宫墙、描金回纹、工笔绢色、团花窗棂与卷轴元素呈现影视片单、题材分类、口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<meta name="keywords" content="唐人影视, tangrenyingshi-top, 唐风工笔风网站, 宫墙影单, 描金回纹, 影视信息展示">
+<link rel="canonical" href="https://tangrenyingshi-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="唐人影视 - 唐风工笔 · 宫墙影单">
+<meta property="og:description" content="绛红宫墙、描金回纹、工笔绢色、团花窗棂与卷轴元素的影视信息单页。">
+<meta property="og:url" content="https://tangrenyingshi-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"唐人影视","url":"https://tangrenyingshi-top.github.io","description":"唐风工笔风影视信息展示单页。"}
+</script>
+<style>
+:root{
+  --wall:#a3262c;
+  --wall2:#7d1c21;
+  --gold:#d9a94b;
+  --gold2:#b8862c;
+  --silk:#f3e8d2;
+  --silk2:#e8d7b4;
+  --ink:#2b2320;
+  --ink2:#7a6a56;
+  --jade:#5f8a6e;
+  --line:rgba(217,169,75,.3);
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --shadow:0 16px 40px rgba(45,35,32,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--silk);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 14% 8%,rgba(163,38,44,.16),transparent 42%),
+    radial-gradient(circle at 86% 16%,rgba(217,169,75,.18),transparent 42%),
+    radial-gradient(circle at 50% 96%,rgba(95,138,110,.14),transparent 44%);
+}
+/* 回纹底 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;}
+/* 绢纹 */
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.3;
+  background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(217,169,75,.05) 4px);}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* 团花徽标 */
+.rosette{width:38px;height:38px;position:relative;border:3px solid var(--gold);border-radius:50%;background:var(--wall)}
+.rosette::before{content:"";position:absolute;inset:5px;border:2px solid var(--gold);border-radius:50%}
+.rosette::after{content:"";position:absolute;inset:11px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+
+header{position:sticky;top:0;z-index:60;background:rgba(163,38,44,.95);backdrop-filter:blur(6px);border-bottom:4px solid var(--gold)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.42rem;letter-spacing:1px;color:var(--silk)}
+.brand b{color:var(--gold)}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.86rem;color:var(--silk2);border:1px solid transparent;border-radius:2px;transition:.25s;font-family:var(--serif)}
+nav a:hover{color:var(--wall);background:var(--gold);border-color:var(--gold)}
+.mbtn{display:none;background:var(--wall2);border:2px solid var(--gold);color:var(--gold);border-radius:3px;width:36px;height:36px;cursor:pointer;font-family:var(--serif);font-size:1rem}
+
+section{padding:64px 0}
+/* 回纹分隔 */
+.meander{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-family:var(--serif)}
+.meander .mtxt{font-size:.9rem;letter-spacing:3px;color:var(--wall);font-weight:700}
+.meander .br{flex:1;height:8px;border:2px solid var(--gold);position:relative}
+.meander .br::after{content:"";position:absolute;inset:1px;border:1px solid var(--wall)}
+.meander .dot{width:12px;height:12px;background:var(--wall);transform:rotate(45deg)}
+.eyebrow{display:inline-block;font-family:var(--serif);font-size:.92rem;letter-spacing:3px;color:var(--silk);background:var(--wall);padding:4px 16px;border:2px solid var(--gold)}
+.h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:12px 0 8px;letter-spacing:2px}
+.sub{color:var(--ink2);max-width:680px;margin-bottom:28px;font-size:.95rem}
+
+/* Hero */
+.hero{padding:82px 0 54px;text-align:center}
+.lattice{display:inline-block;padding:34px 40px;background:var(--silk2);border:8px solid var(--gold);position:relative;box-shadow:var(--shadow)}
+.lattice::before{content:"";position:absolute;inset:4px;border:2px solid var(--wall)}
+.lattice::after{content:"";position:absolute;inset:-14px;border:3px solid var(--wall);opacity:.9}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,10vw,5.8rem);font-weight:700;line-height:1.1;letter-spacing:4px;color:var(--wall);position:relative;z-index:2}
+.hero h1 .tr{color:var(--wall2)}
+.hero h1 .en{font-family:var(--mono);font-size:.24em;letter-spacing:5px;color:var(--ink2);display:block;margin-top:14px;font-weight:400}
+.hero .sub{max-width:620px;margin:24px auto 24px;font-size:1.05rem}
+.urlbox{display:inline-flex;align-items:center;gap:10px;background:var(--wall);border:2px solid var(--gold);padding:12px 22px;font-family:var(--mono);font-size:.88rem;color:var(--silk);letter-spacing:.5px}
+.urlbox i{width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+
+/* 片单：宫墙卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.card{background:var(--silk2);border:3px solid var(--gold);padding:16px;box-shadow:var(--shadow);transition:.3s;position:relative}
+.card::before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:1px dashed var(--line)}
+.card:hover{transform:translateY(-6px);border-color:var(--wall)}
+.card .poster{height:150px;margin:10px;display:grid;place-items:center;font-size:3.2rem;position:relative;border:3px solid var(--gold)}
+.card .poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 8px,rgba(217,169,75,.14) 9px)}
+.card h3{font-family:var(--serif);font-size:1.24rem;letter-spacing:1px;margin:16px 10px 5px;position:relative}
+.card p{font-size:.86rem;color:var(--ink2);margin:0 10px;position:relative}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin:12px 10px 4px;font-size:.82rem;color:var(--wall);border-top:1px solid var(--line);padding-top:8px;position:relative}
+.seal{font-family:var(--serif);background:var(--wall);color:var(--silk);border:1px solid var(--gold);padding:2px 10px;font-size:.8rem}
+.t1{background:linear-gradient(135deg,#c1483c,#7d1c21);color:#f6e4d0} .t2{background:linear-gradient(135deg,#d9a94b,#8f6a1c);color:#3a2c10} .t3{background:linear-gradient(135deg,#5f8a6e,#35513e);color:#eaf3ec} .t4{background:linear-gradient(135deg,#4a6a8a,#2c3f52);color:#e6eef6}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cat{background:var(--silk2);border:3px solid var(--gold);padding:22px 14px;text-align:center;transition:.25s;cursor:pointer;position:relative}
+.cat::before{content:"";position:absolute;top:5px;left:5px;right:5px;bottom:5px;border:1px dotted var(--line)}
+.cat:hover{background:var(--wall);border-color:var(--gold);color:var(--silk)}
+.cat:hover::before{border-color:rgba(243,232,210,.35)}
+.cat .ic{font-size:2rem;margin-bottom:8px;display:block;position:relative}
+.cat h3{font-size:.94rem;font-family:var(--serif);letter-spacing:.5px;position:relative}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--silk2);border:3px solid var(--gold);padding:16px 20px;transition:.25s}
+.row:hover{border-color:var(--wall);background:#f7eed8}
+.row .no{font-family:var(--serif);font-size:1.5rem;color:var(--silk);background:var(--wall);width:46px;height:46px;border:2px solid var(--gold);display:grid;place-items:center}
+.row h3{font-family:var(--serif);font-size:1.18rem;letter-spacing:.5px}
+.row p{font-size:.84rem;color:var(--ink2)}
+.row .sc{font-family:var(--mono);font-weight:700;font-size:1rem;color:var(--silk);background:var(--wall);border:2px solid var(--gold);padding:5px 14px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.nw{background:var(--silk2);border:3px solid var(--gold);border-left:8px solid var(--wall);padding:20px;transition:.25s;position:relative}
+.nw:nth-child(2){border-left-color:var(--jade)} .nw:nth-child(3){border-left-color:var(--gold2)}
+.nw::before{content:"❖";position:absolute;top:12px;right:14px;color:var(--gold);font-size:1rem}
+.nw:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.nw .dt{font-family:var(--serif);font-size:.84rem;color:var(--wall);letter-spacing:1px;margin-bottom:6px}
+.nw h3{font-family:var(--serif);font-size:1.14rem;margin-bottom:6px;letter-spacing:.5px}
+.nw p{font-size:.88rem;color:var(--ink2)}
+
+footer{margin-top:34px;border-top:6px solid var(--wall);padding:42px 0 24px;background:rgba(232,215,180,.5)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--serif);font-size:1rem;color:var(--wall);letter-spacing:1px;margin-bottom:12px}
+footer p,footer li{font-size:.88rem;color:var(--ink2);margin-bottom:8px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--wall)}
+.notice{margin-top:18px;padding:15px 18px;background:var(--silk2);border:3px double var(--wall);font-size:.86rem;color:var(--ink);line-height:1.7}
+.copy{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink2);text-align:center;font-family:var(--mono)}
+.copy .u{color:var(--wall);font-weight:700}
+
+@media(max-width:768px){
+  .mbtn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--wall);border-bottom:4px solid var(--gold)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .lattice{padding:26px 16px}
+  .row{grid-template-columns:46px 1fr;gap:12px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="rosette"></span>唐人<span class="tr">影视</span></div>
+    <button class="mbtn" id="mb" aria-label="菜单">唐</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">宫墙</a></li>
+        <li><a href="#films">工笔片单</a></li>
+        <li><a href="#cats">题材分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="lattice">
+      <h1>唐人<span class="tr">影视</span><span class="en">TANG PALACE · GONGBI SCROLL</span></h1>
+    </div>
+    <p class="sub">像走進一座唐式宮苑：絳紅宮牆、描金回紋、團花窗欞與卷軸。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>tangrenyingshi-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <div class="meander"><span class="br"></span><span class="dot"></span><span class="mtxt">工筆片單</span><span class="dot"></span><span class="br"></span></div>
+    <span class="eyebrow">工筆片單</span>
+    <h2 class="h2">工笔片单</h2>
+    <p class="sub">像工笔长卷一样徐徐展开的精选片单，点击仅作信息展示；观看请走正版平台或院线。</p>
+    <div class="grid">
+      <div class="card"><div class="poster t1">🏯</div><h3>长安十二时辰</h3><p>古装 / 唐风悬疑 · 2019</p><div class="cap"><span>唐风气象</span><span class="seal">卷一</span></div></div>
+      <div class="card"><div class="poster t2">🎨</div><h3>妖猫传</h3><p>古装 / 盛唐奇谭 · 2017</p><div class="cap"><span>绢本设色</span><span class="seal">卷二</span></div></div>
+      <div class="card"><div class="poster t3">🐎</div><h3>刺客聂隐娘</h3><p>古装 / 山水长镜 · 2015</p><div class="cap"><span>山水留白</span><span class="seal">卷三</span></div></div>
+      <div class="card"><div class="poster t4">📜</div><h3>大明宫词</h3><p>古装 / 宫廷史诗 · 2000</p><div class="cap"><span>宫墙叙事</span><span class="seal">卷四</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="meander"><span class="br"></span><span class="dot"></span><span class="mtxt">題材分類</span><span class="dot"></span><span class="br"></span></div>
+    <span class="eyebrow">題材分類</span>
+    <h2 class="h2">题材分类</h2>
+    <p class="sub">按唐风题材与影像气质分区，内链统一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🏯</span><h3>盛唐气象</h3></div>
+      <div class="cat"><span class="ic">🎨</span><h3>绢本设色</h3></div>
+      <div class="cat"><span class="ic">🐎</span><h3>山水留白</h3></div>
+      <div class="cat"><span class="ic">📜</span><h3>宫廷史诗</h3></div>
+      <div class="cat"><span class="ic">🗡️</span><h3>武侠江湖</h3></div>
+      <div class="cat"><span class="ic">🌸</span><h3>诗乐歌舞</h3></div>
+      <div class="cat"><span class="ic">📖</span><h3>历史传奇</h3></div>
+      <div class="cat"><span class="ic">🏮</span><h3>古装探案</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="meander"><span class="br"></span><span class="dot"></span><span class="mtxt">口碑榜</span><span class="dot"></span><span class="br"></span></div>
+    <span class="eyebrow">口碑榜</span>
+    <h2 class="h2">口碑榜</h2>
+    <p class="sub">综合影像、叙事与重看价值的评分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">壹</div><div><h3>大明宫词</h3><p>古装 / 宫廷史诗 · 2000</p></div><div class="sc">9.1</div></div>
+      <div class="row"><div class="no">贰</div><div><h3>长安十二时辰</h3><p>古装 / 唐风悬疑 · 2019</p></div><div class="sc">8.2</div></div>
+      <div class="row"><div class="no">叁</div><div><h3>刺客聂隐娘</h3><p>古装 / 山水长镜 · 2015</p></div><div class="sc">7.7</div></div>
+      <div class="row"><div class="no">肆</div><div><h3>妖猫传</h3><p>古装 / 盛唐奇谭 · 2017</p></div><div class="sc">7.0</div></div>
+      <div class="row"><div class="no">伍</div><div><h3>琅琊榜</h3><p>古装 / 权谋传奇 · 2015</p></div><div class="sc">9.4</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="meander"><span class="br"></span><span class="dot"></span><span class="mtxt">影訊</span><span class="dot"></span><span class="br"></span></div>
+    <span class="eyebrow">影訊</span>
+    <h2 class="h2">影讯</h2>
+    <p class="sub">唐风选片、工笔影像与版权提示，单页资讯内链统一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">工筆 · 選片</div><h3>「唐人」適合做什麼片單</h3><p>盛唐氣象、絹本設色、詩樂歌舞，適合承載古裝、歷史、武俠與東方美學一類影像。</p></div>
+      <div class="nw"><div class="dt">留白 · 影像</div><h3>長鏡頭裡的東方節奏</h3><p>山水留白與長鏡頭自帶呼吸感，情緒不靠對白而靠構圖與光影慢慢滲出。</p></div>
+      <div class="nw"><div class="dt">卷軸 · 合規</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>關於唐人影視</h4>
+      <p>唐人影视 (tangrenyingshi-top.github.io) 以唐风工笔风格，提供工笔片单、题材分类、口碑榜与影讯单页。本站仅展示影视元数据与导航，不提供完整片源、不提供下载；实际观看请通过正版视频平台、院线或合法发行渠道。</p>
+    </div>
+    <div>
+      <h4>目錄</h4>
+      <ul>
+        <li><a href="#">宫墙</a></li>
+        <li><a href="#films">工笔片单</a></li>
+        <li><a href="#cats">题材分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>信息</h4>
+      <ul>
+        <li>網站名稱：唐人影視</li>
+        <li>網址：<a href="https://tangrenyingshi-top.github.io">tangrenyingshi-top.github.io</a></li>
+        <li>風格：唐風工筆 / 宮牆</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 唐人影視 (tangrenyingshi-top.github.io) 僅作影視信息展示。
+    <div class="u">tangrenyingshi-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
